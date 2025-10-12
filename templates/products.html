@@ -1,0 +1,14 @@
+{% include 'base.html' %}
+{% include 'navbar.html' %}
+ {% if query %}
+    <h1 class="mb-4 text-xl font-semibold">Results for “{{ query }}”</h1>
+  {% else %}
+    <h1 class="mb-4 text-xl font-semibold">All Products</h1>
+  {% endif %}
+<h2 class="text-center font-bold text-xl mr-24 ml-20 mb-4">All products / {{product_list|length}} Products</h2>
+    {% if product_list %}
+        {% include 'product_card.html' %}
+    {% else %}
+        <h2 class="font-bold text-xl text-center">No product found.</h2>
+    {% endif %}
+{% include 'footer.html' %}

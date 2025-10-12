@@ -1,0 +1,39 @@
+{% include 'base.html' %}
+<div class="bg-black mt-20 w-full h-[0.5px]"></div>
+<div class="flex justify-center mt-20 mb-10">
+    <div>
+        <p class="text-black text-center font-bold w-100">Get 10% OFF by Subscribing to our newsletter.</p>
+        <p class="text-sm text-gray-600 text-center ">
+            Follow all the trends, collabs and sales.
+        </p>
+       <form method="post" action="{{ url_for('accept_newsletter') }}">
+         <div>
+            <div>
+                <input type="email" name="email" class="bg-gray-100 p-2 rounded-lg pe-16 mt-2 w-100 text-gray-500" placeholder="E-mail" />
+            </div>
+            <div class="text-center bg-black text-white p-2 rounded-2xl font-bold mt-4 cursor-pointer transition hover:opacity-50"><button>Submit</button></div>
+        </div>
+       </form>
+    </div>
+</div>
+<div class="bg-black mt-20 w-full h-[0.5px] mb-4"></div>
+
+
+<footer class="bg-white rounded-lg m-4 ">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-black sm:text-center">© 2025 <a href="#" class="hover:underline">DRL</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-black">
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">About</a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+        </li>   
+    </ul>
+    </div>
+</footer>
+

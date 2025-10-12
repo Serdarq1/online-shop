@@ -1,0 +1,9 @@
+{% include 'base.html' %}
+{% include 'navbar.html' %}
+<h2 class="text-center font-bold text-xl mr-24 ml-20 mb-4">All Sweatshirts / {{product_list|length}} Products</h2>
+{% if product_list %}
+        {% include 'product_card.html' %}
+    {% else %}
+        <h2 class="font-bold text-xl text-center">No product found.</h2>
+    {% endif %}
+{% include 'footer.html' %}

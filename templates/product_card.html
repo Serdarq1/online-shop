@@ -1,0 +1,22 @@
+{% include 'base.html' %}
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
+    {% for product in product_list %}
+    <a href="{{url_for('product_showcase', product_id=product.id)}}">
+        <div class="w-70 ml-8 cursor-pointer">
+        <div class="img">
+            <img src="{{product.img}}" class="cursor-pointer transition hover:opacity-50" />
+        </div>
+        <div>
+            <div>
+                <p class="text-sm"> {{product.name}} </p>
+                <p class="font-bold text-sm">${{product.price}}</p>
+            </div>
+            <div>
+                <img src="" />
+            </div>
+        </div>
+    </div>
+    </a>
+{% endfor %}
+</div>
